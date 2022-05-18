@@ -1,0 +1,19 @@
+{
+  "name": "imp",
+  "version": "1.0.0",
+  "description": "Minimal import manager",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avigloz/imp.git"
+  },
+  "author": "Avi Glozman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/avigloz/imp/issues"
+  },
+  "homepage": "https://github.com/avigloz/imp#readme"
+}
