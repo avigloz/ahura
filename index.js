@@ -1,23 +1,23 @@
 "use strict";
 
-class imp {
+class Ahura {
    constructor(...args) {
-      const imp_config = require(`${process.cwd()}/imp_config.json`);
+      const ahura_conf = require(`${process.cwd()}/ahura_conf.json`);
 
       const caller_path_arr = this._getCaller().split('/');
       const caller_name = caller_path_arr[caller_path_arr.length - 1];
 
       const groups = args.length ? [...args, caller_name] : [caller_name];
-      this._setFunctions(imp_config, groups)
+      this._setFunctions(ahura_conf, groups)
    }
 
-   _setFunctions(imp_config, groups) {
+   _setFunctions(ahura_conf, groups) {
       groups.forEach(group => {
-         if (!imp_config[group]) console.warn(`Group ${group} not found in imp_config.json! Skipping.`);
+         if (!ahura_conf[group]) console.warn(`Group ${group} not found in ahura_conf.json! Skipping.`);
          else {
-            Object.keys(imp_config[group]).forEach(pkg_name => {
+            Object.keys(ahura_conf[group]).forEach(pkg_name => {
                const pkg = require(pkg_name);
-               imp_config[group][pkg_name].forEach(func_name => {
+               ahura_conf[group][pkg_name].forEach(func_name => {
                   this[func_name] = pkg[func_name]
                });
             });
@@ -46,5 +46,5 @@ class imp {
 }
 
 module.exports = (...args) => {
-   return new imp(...args);
+   return new Ahura(...args);
 }

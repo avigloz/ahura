@@ -1,5 +1,5 @@
 {
-  "name": "imp",
+  "name": "ahura",
   "version": "1.0.0",
   "description": "Minimal import manager",
   "main": "index.js",
@@ -8,13 +8,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/avigloz/imp.git"
+    "url": "git+https://github.com/avigloz/ahura.git"
   },
   "author": "Avi Glozman",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/avigloz/imp/issues"
+    "url": "https://github.com/avigloz/ahura/issues"
   },
-  "homepage": "https://github.com/avigloz/imp#readme",
+  "homepage": "https://github.com/avigloz/ahura#readme",
   "dependencies": {}
 }
