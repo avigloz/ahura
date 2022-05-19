@@ -7,6 +7,8 @@ Ahura - A Minimal Node Import Manager
 
 No dependencies and tiny.
 
+`npm i ahura`
+
 ## Getting started
 
 ### Simple project
