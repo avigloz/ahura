@@ -1,0 +1,8 @@
+{
+   "test": {
+      "lodash": ["isEqual", "shuffle"]
+   },
+   "test.js": {
+      "lodash": ["includes", "sample"]
+   }
+}

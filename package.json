@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/avigloz/imp/issues"
   },
-  "homepage": "https://github.com/avigloz/imp#readme"
+  "homepage": "https://github.com/avigloz/imp#readme",
+  "dependencies": {}
 }

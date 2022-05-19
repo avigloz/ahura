@@ -5,6 +5,8 @@ The Imp - A Minimal Node Import Manager
 
 `imp` lets you organize multiple one-to-many file-import associations for your projects.
 
+No dependencies, no deals with the devil.
+
 ## Getting started
 
 ### Simple project
@@ -39,8 +41,8 @@ Here's how you might configure `imp` for a _single file_:
 ```json
 {
 	"app.js": {
-		"async": [ ... ],
-		"lodash": [ ... ],
+		"async": [ "waterfall", "parallel" ],
+		"lodash": [ "includes", "sample", "isEqual", "shuffle" ],
 	}	
 }
 ```
@@ -48,7 +50,7 @@ For any additional files, the same format as above can be repeated.
 
 To access the functions you need in `app.js`, simply do:
 ```
-const imp = require("imp");
+const imp = require("imp")();
 
 // using async.waterfall:
 imp.waterfall(...);
@@ -69,7 +71,11 @@ If you wanted to use more than one group at once, simply include additional argu
 
 ### Notes
 
-Group names ending in `.js` will be treated as file-specific. By default, if no arguments are provided, `imp` will default to the group with the same name as the file where `imp` is initialized.
+Group names ending in `.js` will be treated as file-specific. If no arguments are provided, `imp` will default to the group with the same name as the file where `imp` is initialized. Even if arguments are provided, `imp` will implicitly include any functions in the default group - so delete the group if you would rather not have this behavior occur.
+
+`imp` *can* be initialized more than once per file (in case you need more _imps_).
+
+If no suitable groups are found, nothing will be imported.
 
 ## The "Why"
 
@@ -89,4 +95,4 @@ If you come upon a weird bug or problem, feel free to create an issue and I'll t
 
 ## Disclaimer
 
-`imp` is a very new package. While it may seem cool, `imp` may not work correctly, and as of right is *not* recommended for use in production. I assume no liability for any negative impacts `imp` may have on your projects.
+`imp` is a very new package and is in a rough state. While it may seem cool, `imp` may not work correctly, and as of right is *not* recommended for use in production. I assume no liability for any negative impacts `imp` may have on your projects.
