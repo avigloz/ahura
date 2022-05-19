@@ -3,7 +3,7 @@ The Imp - A Minimal Node Import Manager
 
 ## Introduction
 
-`imp` lets you organize multiple one-to-many file-import associations for your projects.
+`imp` lets you organize how you import packages in your projects.
 
 No dependencies, no deals with the devil.
 
