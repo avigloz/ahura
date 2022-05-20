@@ -8,7 +8,7 @@ class Ahura {
       const caller_name = caller_path_arr[caller_path_arr.length - 1];
 
       const groups = args.length ? [...args, caller_name] : [caller_name];
-      this._setFunctions(ahura_conf, groups)
+      this._setFunctions(ahura_conf, groups);
    }
 
    _setFunctions(ahura_conf, groups) {
@@ -18,7 +18,7 @@ class Ahura {
             Object.keys(ahura_conf[group]).forEach(pkg_name => {
                const pkg = require(pkg_name);
                ahura_conf[group][pkg_name].forEach(func_name => {
-                  this[func_name] = pkg[func_name]
+                  this[func_name] = pkg[func_name];
                });
             });
          }
