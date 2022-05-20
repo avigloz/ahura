@@ -89,7 +89,7 @@ There's typically two sides to the "imports" coin:
 
 I typically prefer to use the second method (unless I'm using the REPL or something), but there are times where a project I may be working on re-uses imports so much, that it starts to feel like "mandatory clutter".
 
-In fairness, `ahura` does not totally end that clutter, but it does reduce and organize it in a pleasant manner. The simple trade-off is not being able to see which functions/libraries a file uses immediately (you would have to instead read the imp config).
+In fairness, `ahura` does not totally end that clutter, but it does reduce and organize it in a pleasant manner. The simple trade-off is not being able to see which functions/libraries a file uses immediately (you would have to instead read the ahura config).
 
 ## Troubleshooting
 
