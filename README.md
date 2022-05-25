@@ -1,6 +1,9 @@
 # ahura
 Ahura - A Minimal Node Import Manager
 
+![NPM](https://img.shields.io/npm/l/ahura)
+![npm](https://img.shields.io/npm/dm/ahura)
+
 ## Introduction
 
 `ahura` lets you organize how you import packages in your projects.
