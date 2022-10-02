@@ -1,12 +1,12 @@
 # ahura
-Ahura - A Minimal Node Import Manager
+Ahura - A Minimal Node `require` Manager
 
 ![NPM](https://img.shields.io/npm/l/ahura)
 ![npm](https://img.shields.io/npm/dm/ahura)
 
 ## Introduction
 
-`ahura` lets you organize how you import packages in your projects.
+`ahura` lets you organize how you `require` modules in your projects.
 
 No dependencies and tiny.
 
@@ -16,7 +16,7 @@ No dependencies and tiny.
 
 ### Simple project
 
-Let's say you have a file called `app.js` which needs the following function from the following libraries:
+Let's say you have a file called `app.js` which needs the following function from the following modules/packages:
 
 [`sortBy`, `cloneDeep`, `isEqual`] from `lodash`
 
@@ -35,7 +35,7 @@ If your project is similar to this, and is only comprised of one file that impor
 
 In larger projects, `ahura` is far more useful.
 
-The main purpose of `ahura`, as mentioned above, is to manage function imports - so, in large projects where many modules might import many of the same functions over and over, `ahura` shines.
+The main purpose of `ahura`, as mentioned above, is to manage function imports from modules - so, in large projects where many modules might `require` many of the same functions over and over, `ahura` shines.
 
 Your project benefits from both improved organization and code readability.
 
@@ -66,7 +66,7 @@ As you can see, this is very tidy.
 
 In the sample configuration above, it may look as though the "keys" are merely filenames. In fact, they are not. 
 
-Each "key" in the config is a _group name_, which means files across your project can re-use imports without needing to do so explicitly. 
+Each "key" in the config is a _group name_, which means files across your project can re-use function imports without needing to do so explicitly. 
 
 So, if I had a group called `utils` that uses functions from various packages that I want to re-use across files, I would simply do:
 
@@ -86,7 +86,7 @@ If no suitable groups are found, nothing will be imported.
 
 There's typically two sides to the "imports" coin:
 
-1) Require()/import the entire package, then do `package.function()`, or
+1) `require` the entire package, then do `package.function()`, or
 
 2) destructure the specific functions per package you need in each file
 
