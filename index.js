@@ -41,7 +41,7 @@ class Ahura {
       } finally {
          Error.prepareStackTrace = _prepareStackTrace;
       }
-      return new Error("Cannot determine group name for imp via caller file");
+      return new Error("Cannot determine group name for Ahura via caller file");
    }
 }
 
